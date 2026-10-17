@@ -2,303 +2,121 @@
    PRII DOCES — PÁGINA INICIAL
    Arquivo: css/index.css
 
-   GUIA PARA EDIÇÃO
-   01. Cores principais ............ :root
-   02. Fundo marrom escuro ......... body
-   03. Perfil e logo ................ .store-header
-   04. Fotos das estações ........... .photo-gallery / .photo-card
-   05. Botões e ordem dos links ..... .main-links / .main-link
-   06. Informações de entrega ....... .delivery-info
-   07. Ajustes para celular ......... media queries
+   GUIA RÁPIDO
+   01. Cores e fundo rosa .......... :root / body
+   02. Foto de perfil ampliada e apresentação . .store-header
+   03. Links principais ............ .main-links / .main-link
+   04. Rodapé ...................... .page-footer
+   05. Ajustes para celular ........ media queries
    ===================================================================== */
 
-/* 01. Cores da identidade visual */
+/* 01. Paleta rosa clara da PRII DOCES */
 :root {
-  --chocolate: #35150d;
-  --chocolate-light: #4b2115;
-  --chocolate-button: #552719;
-  --cream: #fff1d8;
-  --cream-muted: #e6cbb5;
-  --gold: #d9ad72;
-  --border: rgba(255, 235, 209, 0.22);
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+  --pink-page: #f8e5eb;
+  --pink-light: #fff7f9;
+  --pink-card: #f3d4df;
+  --pink-border: #e7bdcb;
+  --pink-deep: #a73559;
+  --brown-text: #59372f;
+  --brown-muted: #80645e;
+  --white: #fffdfd;
+  --shadow: 0 10px 28px rgba(112, 54, 73, 0.12);
 }
 
-/* 02. Base e fundo marrom escuro inspirado na referência */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  min-height: 100%;
-  scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; }
+html { min-height: 100%; scroll-behavior: smooth; }
 body {
   min-height: 100vh;
   margin: 0;
   padding: 24px 16px;
-  color: var(--cream);
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(116, 55, 30, 0.36), transparent 48%),
-    var(--chocolate);
+  color: var(--brown-text);
+  background: radial-gradient(ellipse at 50% 0%, #fff7f9 0%, transparent 55%), var(--pink-page);
   font-family: "DM Sans", Arial, sans-serif;
 }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* 03. Conteúdo central da página */
-.link-page {
-  width: min(100%, 520px);
-  margin: 0 auto;
-}
-
-/* Perfil, logo e frase */
+/* 02. Conteúdo central, foto de perfil ampliada e frase */
+.link-page { width: min(100%, 520px); margin: 0 auto; }
 .store-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 6px 10px 20px;
+  padding: 6px 10px 24px;
 }
-
 .profile-picture {
-  width: 92px;
-  height: 92px;
-  margin-bottom: 14px;
+  width: 156px;
+  height: 156px;
+  margin-bottom: 18px;
   overflow: hidden;
-  border: 2px solid var(--gold);
+  border: 2px solid var(--pink-border);
   border-radius: 50%;
-  background: var(--chocolate-light);
+  background: var(--pink-card);
   box-shadow: var(--shadow);
 }
-
-.profile-picture img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.store-logo {
-  width: min(270px, 78%);
-  max-height: 115px;
-  object-fit: contain;
-  /* Se o arquivo do logo tiver fundo transparente, o fundo marrom aparece atrás. */
-}
-
+.profile-picture img { width: 100%; height: 100%; object-fit: cover; }
 .store-description {
   margin: 12px 0 0;
-  color: var(--cream-muted);
-  font-size: 14px;
-  letter-spacing: 0.04em;
+  color: var(--brown-muted);
+  font-size: 15px;
+  letter-spacing: 0.025em;
 }
 
-/* 04. Fotos reais das estações — substitua os arquivos em assets/ para trocar as fotos */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0 0 22px;
-}
-
-.photo-card {
-  position: relative;
-  min-width: 0;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--chocolate-light);
-  box-shadow: var(--shadow);
-  isolation: isolate;
-}
-
-.photo-card::after {
-  position: absolute;
-  z-index: 1;
-  inset: 35% 0 0;
-  content: "";
-  background: linear-gradient(180deg, transparent, rgba(25, 8, 4, 0.88));
-  pointer-events: none;
-}
-
-.photo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.photo-card:hover img {
-  transform: scale(1.04);
-}
-
-.photo-caption {
-  position: absolute;
-  z-index: 2;
-  right: 10px;
-  bottom: 12px;
-  left: 10px;
-  color: #fff5e7;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(11px, 3vw, 18px);
-  font-weight: 700;
-  line-height: 1.15;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
-}
-
-/* 05. Links grandes, com área de toque confortável */
-.main-links {
-  display: grid;
-  gap: 13px;
-}
-
+/* 03. Botões grandes, com espaço confortável para tocar */
+.main-links { display: grid; gap: 13px; }
 .main-link {
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) 24px;
+  grid-template-columns: 46px minmax(0, 1fr) 24px;
   align-items: center;
-  gap: 12px;
-  min-height: 66px;
-  padding: 14px 18px;
-  color: var(--cream);
-  background: linear-gradient(135deg, #512517, #421b11);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+  gap: 13px;
+  min-height: 76px;
+  padding: 16px 18px;
+  color: var(--brown-text);
+  background: linear-gradient(135deg, #fff9fb, #f5dce5);
+  border: 1px solid var(--pink-border);
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(112, 54, 73, 0.08);
   transition: transform 0.16s ease, background 0.16s ease, border-color 0.16s ease;
 }
-
-.main-link:hover,
-.main-link:focus-visible {
-  background: #67331f;
-  border-color: rgba(217, 173, 114, 0.75);
+.main-link:hover, .main-link:focus-visible {
+  background: #f1cbd8;
+  border-color: #d89aaf;
   outline: none;
 }
-
-.main-link:active {
-  transform: scale(0.985);
-}
-
+.main-link:active { transform: scale(0.985); }
 .main-link-primary {
-  background: linear-gradient(135deg, #754027, #542719);
-  border-color: rgba(217, 173, 114, 0.7);
+  background: linear-gradient(135deg, #f0c8d6, #f9e6ec);
+  border-color: #dba2b5;
 }
-
 .link-icon {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   place-items: center;
-  color: var(--cream);
-  background: rgba(20, 6, 3, 0.34);
-  border-radius: 12px;
-  font-size: 25px;
+  color: var(--pink-deep);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(231, 189, 203, 0.8);
+  border-radius: 14px;
+  font-size: 27px;
 }
+.instagram-icon { font-size: 31px; }
+.whatsapp-icon { font-size: 29px; }
+.link-label { font-size: 19px; font-weight: 800; line-height: 1.25; }
+.link-arrow { color: var(--pink-deep); font-size: 25px; text-align: right; }
 
-.instagram-icon {
-  font-size: 31px;
-}
+/* 04. Rodapé da página inicial */
+.page-footer { padding: 20px 8px 8px; color: var(--brown-muted); font-size: 12px; text-align: center; }
+.page-footer p { margin: 0; }
 
-.whatsapp-icon {
-  font-size: 29px;
-}
-
-.link-label {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-.link-arrow {
-  color: var(--gold);
-  font-size: 23px;
-  text-align: right;
-}
-
-/* 06. Informações de entrega e retirada */
-.delivery-info {
-  display: grid;
-  gap: 7px;
-  margin: 18px 4px 0;
-  padding: 15px 14px;
-  color: var(--cream-muted);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-  text-align: center;
-}
-
-.delivery-info p {
-  margin: 0;
-}
-
-.delivery-info span {
-  margin-right: 5px;
-}
-
-.page-footer {
-  padding: 18px 8px 8px;
-  color: #c8a995;
-  font-size: 12px;
-  text-align: center;
-}
-
-.page-footer p {
-  margin: 0;
-}
-
-/* 07. Layout para telas pequenas */
+/* 05. Ajustes para celulares */
 @media (max-width: 380px) {
-  body {
-    padding: 16px 12px;
-  }
-
-  .photo-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 7px;
-  }
-
-  .photo-card {
-    border-radius: 12px;
-  }
-
-  .photo-caption {
-    right: 5px;
-    bottom: 7px;
-    left: 5px;
-    font-size: 11px;
-  }
-
-  .main-link {
-    grid-template-columns: 38px minmax(0, 1fr) 20px;
-    gap: 10px;
-    min-height: 62px;
-    padding: 12px;
-  }
-
-  .link-icon {
-    width: 38px;
-    height: 38px;
-  }
-
-  .link-label {
-    font-size: 16px;
-  }
+  body { padding: 18px 12px; }
+  .profile-picture { width: 138px; height: 138px; }
+  .main-link { grid-template-columns: 42px minmax(0, 1fr) 20px; gap: 10px; min-height: 70px; padding: 12px; }
+  .link-icon { width: 42px; height: 42px; }
+  .link-label { font-size: 17px; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }

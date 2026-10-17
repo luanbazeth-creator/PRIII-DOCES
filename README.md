@@ -145,3 +145,11 @@ Os atalhos da página inicial abrem o `cardapio.html` com a categoria selecionad
 ## Quantidade de doces personalizados
 
 No modal de personalização, os botões `−` e `+` permitem escolher a quantidade antes de adicionar ao carrinho. Você pode adicionar a mesma combinação mais de uma vez (as quantidades são somadas) ou escolher combinações diferentes de sabor, recheio e finalização; cada combinação fica registrada separadamente no carrinho. Mesmo usando “Continuar sem personalizar”, a quantidade selecionada é respeitada.
+
+
+## Página de Estações (adicionada)
+- `estacoes.html`: página exclusiva com Açaí, Fondue, Experiência Fondue e Estação Donuts.
+- `css/estacoes.css`: estilos próprios da página de estações.
+- `assets/estacao-donuts.jpeg`: foto de donuts fornecida para esta atualização.
+- Cada cartão tem um botão que abre o WhatsApp oficial da PRII DOCES com uma mensagem pronta.
+- O botão “Estações” da página inicial aponta para `estacoes.html`. A página inicial agora usa o rosa claro e não exibe as fotos das estações.
