@@ -37,6 +37,126 @@
    10. Responsividade
    ============================================================ */
 
+/* ============================================================
+   FOTOS DOS PRODUTOS
+   ============================================================ */
+
+.product-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0f5;
+}
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+    }
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+/* =====================================================
+   CORREÇÃO DO CARRINHO
+   Layout dos produtos e imagens
+   ===================================================== */
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cart-item-image {
+    width: 76px;
+    height: 76px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f7e0e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+    .cart-item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.cart-item-info {
+    min-width: 0;
+}
+
+    .cart-item-info h4 {
+        margin: 0 0 5px;
+        font-size: 16px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+.cart-item-price {
+    margin: 0 0 8px;
+    color: #927d75;
+    font-size: 13px;
+}
+
+.cart-item-subtotal {
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .quantity-controls button {
+        width: 34px;
+        height: 34px;
+        border: none;
+        border-radius: 10px;
+        background: #f4dfe3;
+        color: #704638;
+        font-size: 20px;
+    }
+
+@media (max-width: 480px) {
+
+    .cart-item {
+        grid-template-columns: 62px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .cart-item-image {
+        width: 62px;
+        height: 62px;
+    }
+
+    .cart-item-subtotal {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 4px;
+    }
+}
+
 
 /* ============================================================
    01. VARIÁVEIS
@@ -433,102 +553,41 @@ h3 {
 
 
 /* ============================================================
-   04. HERO
+   04. FAIXA COMPACTA DE STATUS DA LOJA
+   Sem o antigo slogan para deixar o cardápio mais limpo.
    ============================================================ */
 .hero-section {
-  padding-top: 26px;
+  padding-top: 18px;
 }
 
 .hero-card {
-  min-height: 310px;
-
+  min-height: 104px;
   position: relative;
   overflow: hidden;
-
   display: flex;
   align-items: center;
-
-  padding: 45px 60px;
-
-  border-radius: 30px;
-
-  background:
-    radial-gradient(circle at 82% 25%, rgba(255, 255, 255, 0.70), transparent 20%),
-    radial-gradient(circle at 74% 85%, rgba(200, 160, 109, 0.16), transparent 27%),
-    linear-gradient(115deg, #f8cbd6, #fff1f4);
+  padding: 16px 28px;
+  border-radius: 22px;
+  background: linear-gradient(115deg, #f8cbd6, #fff1f4);
 }
-
-
-/* Círculo decorativo */
-.hero-card::after {
-  content: "";
-
-  position: absolute;
-
-  width: 360px;
-  height: 360px;
-
-  right: -105px;
-  bottom: -165px;
-
-  border: 1px solid rgba(200, 160, 109, 0.45);
-  border-radius: 50%;
-}
-
 
 .hero-content {
   position: relative;
   z-index: 2;
-
-  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
-
-.section-label,
-.eyebrow {
-  color: var(--color-gold);
-
-  font-size: 10px;
-  font-weight: 800;
-
-  letter-spacing: 3px;
-}
-
-
-.hero-card h1 {
-  margin: 9px 0 13px;
-
-  font-size: clamp(35px, 5vw, 58px);
-  line-height: 1.03;
-}
-
-.hero-card h1 em {
-  color: var(--color-wine);
-  font-style: normal;
-}
-
-.hero-card p {
-  max-width: 510px;
-
-  color: #755d57;
-
-  line-height: 1.6;
-}
-
 
 .store-status {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
-  margin-top: 20px;
   padding: 8px 13px;
-
   border-radius: 99px;
-
-  background: rgba(255, 255, 255, 0.72);
-
+  background: rgba(255, 255, 255, 0.82);
   color: #557249;
-
   font-size: 13px;
   font-weight: 700;
 }
@@ -536,29 +595,20 @@ h3 {
 .store-status i {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
-
   background: #72a45c;
 }
 
-
-/* Selo enviado pela cliente */
 .hero-seal {
   position: absolute;
-  z-index: 2;
-
-  right: 5%;
+  right: 18px;
   top: 50%;
-
-  width: 270px;
-  height: 270px;
-
+  width: 115px;
+  height: 95px;
   object-fit: contain;
-
-  transform: translateY(-50%) rotate(3deg);
-
-  filter: drop-shadow(0 12px 15px rgba(117, 67, 55, 0.10));
+  transform: translateY(-50%);
+  opacity: .86;
+  pointer-events: none;
 }
 
 
@@ -1206,13 +1256,6 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero-seal {
-    right: 2%;
-    width: 220px;
-    height: 220px;
-
-    opacity: 0.75;
-  }
 }
 
 
@@ -1239,34 +1282,24 @@ h3 {
   }
 
   .hero-section {
-    padding-top: 14px;
+    padding-top: 12px;
   }
 
   .hero-card {
-    min-height: 350px;
-
-    align-items: flex-start;
-
-    padding: 34px 24px;
-
-    border-radius: 24px;
-  }
-
-  .hero-card h1 {
-    font-size: 40px;
+    width: min(100% - 28px, 1180px);
+    min-height: 88px;
+    padding: 13px 18px;
+    border-radius: 18px;
   }
 
   .hero-seal {
-    width: 190px;
-    height: 190px;
-
-    right: 2px;
-    bottom: -25px;
-    top: auto;
-
-    transform: rotate(3deg);
-
-    opacity: 0.58;
+    width: 88px;
+    height: 76px;
+    right: 12px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    opacity: .75;
   }
 
   .menu-heading {
@@ -1398,4 +1431,132 @@ h3 {
 .checkout-total-box .checkout-grand-total strong {
   color: var(--color-wine-dark);
   font-size: 21px;
+}
+
+
+/* ============================================================
+   CORREÇÕES V6 — quantidades e escolha de entrega/retirada
+   ============================================================ */
+.product-add-controls .decrease-product,
+.product-add-controls .add-product {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.product-add-controls .decrease-product {
+  border: 1px solid #e8cbd1;
+  background: #fff1f3;
+  color: var(--color-wine);
+}
+.product-add-controls .decrease-product:disabled {
+  background: #f4f1f1;
+  border-color: #ebe5e5;
+  color: #b9adad;
+  cursor: not-allowed;
+}
+.product-add-controls .product-cart-quantity {
+  flex: 0 0 auto;
+  min-width: 24px;
+  padding-inline: 4px;
+}
+.cart-item .quantity-controls button {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+#deliveryMethod[aria-invalid="true"] {
+  border: 2px solid #b44158;
+  outline-offset: 2px;
+}
+.checkout-field-error {
+  color: #a3334d;
+  font-size: 12px;
+  font-weight: 700;
+  margin: -4px 0 12px;
+}
+.checkout-field-error[hidden] {
+  display: none;
+}
+
+
+/* No celular, separa o preço dos três controles para não apertar os botões. */
+@media (max-width: 600px) {
+  .product-bottom {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .product-add-controls {
+    gap: 6px;
+    justify-content: flex-end;
+  }
+}
+
+/* ============================================================
+   V7 — botões de quantidade com área de toque maior e visível
+   ============================================================ */
+.product-add-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 1;
+}
+.product-add-controls .add-product,
+.product-add-controls .decrease-product {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.product-add-controls .product-cart-quantity {
+  min-width: 25px;
+  height: 30px;
+  line-height: 1;
+}
+.cart-item .quantity-controls {
+  gap: 10px;
+}
+.cart-item .quantity-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.cart-item .cart-item-quantity {
+  min-width: 18px;
+  text-align: center;
+}
+.product-add-controls button:focus-visible,
+.cart-item .quantity-controls button:focus-visible {
+  outline: 3px solid #d48aa0;
+  outline-offset: 2px;
+}
+@media (max-width: 350px) {
+  .product-add-controls { gap: 3px; }
+  .product-add-controls .add-product,
+  .product-add-controls .decrease-product { width: 34px; min-width: 34px; height: 36px; min-height: 36px; }
+  .product-add-controls .product-cart-quantity { min-width: 23px; }
 }

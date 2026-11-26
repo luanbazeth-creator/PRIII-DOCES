@@ -41,7 +41,7 @@ Procure pelos comentários ===== para localizar cada área.
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Estilos do projeto -->
-  <link rel="stylesheet" href="css/cardapio.css">
+  <link rel="stylesheet" href="css/cardapio.css?v=7">
 </head>
 
 <body>
@@ -86,21 +86,11 @@ Procure pelos comentários ===== para localizar cada área.
     <section class="hero-section">
       <div class="container hero-card">
 
+        <!-- Faixa compacta: mantém o aviso de funcionamento sem o texto promocional. -->
         <div class="hero-content">
           <span class="eyebrow">PRII DOCES</span>
-
-          <h1>
-            Um docinho para
-            <em>adoçar seu dia</em> ♡
-          </h1>
-
-          <p>
-            Escolha seus favoritos e monte seu pedido
-            de um jeito simples e gostoso.
-          </p>
-
-          <div class="store-status">
-            <i></i>
+          <div class="store-status" aria-label="Status da loja: aberto agora">
+            <i aria-hidden="true"></i>
             <span>Aberto agora</span>
           </div>
         </div>
@@ -122,23 +112,7 @@ Procure pelos comentários ===== para localizar cada área.
     <section class="menu-section" id="cardapio">
       <div class="container">
 
-<section class="featured-section">
-  <div class="featured-heading">
-    <div>
-      <span class="section-label">DESTAQUES</span>
-      <h2>Doces que dão vontade de pedir ♡</h2>
-      <p>Clique em uma foto para ir direto ao doce.</p>
-    </div>
-    <div class="carousel-controls">
-      <button id="carouselPrev" type="button">‹</button>
-      <button id="carouselNext" type="button">›</button>
-    </div>
-  </div>
-  <div class="carousel-window" id="carouselWindow">
-    <div class="carousel-track" id="carouselTrack"></div>
-  </div>
-  <div class="carousel-dots" id="carouselDots"></div>
-</section>
+
 
         <div class="menu-heading">
           <div>
@@ -328,21 +302,25 @@ Procure pelos comentários ===== para localizar cada área.
       <!-- Cliente escolhe entrega ou retirada antes de enviar o pedido. -->
       <label>
         Como deseja receber?
-        <select id="deliveryMethod">
+        <select id="deliveryMethod" required aria-describedby="deliveryMethodNote" aria-invalid="false">
+          <option value="" selected disabled>Selecione uma opção</option>
           <option value="Entrega com frete">Entrega com frete</option>
           <option value="Retirada no local">Retirada no local</option>
         </select>
       </label>
+      <p class="checkout-field-error" id="deliveryMethodError" role="alert" hidden>
+        Escolha entrega ou retirada antes de enviar o pedido.
+      </p>
 
       <p class="checkout-delivery-note" id="deliveryMethodNote">
-        A taxa fixa de entrega é R$ 3,00. Na retirada no local, não há taxa.
+        Escolha entrega ou retirada. A taxa de entrega é R$ 3,00; a retirada não tem taxa.
       </p>
 
       <!-- Resumo financeiro atualizado conforme a forma de recebimento escolhida. -->
       <section class="checkout-total-box" aria-label="Resumo do pedido">
         <div><span>Subtotal dos produtos</span><strong id="checkoutSubtotal">R$ 0,00</strong></div>
-        <div><span>Taxa de entrega</span><strong id="checkoutDeliveryFee">R$ 3,00</strong></div>
-        <div class="checkout-grand-total"><span>Total do pedido</span><strong id="checkoutGrandTotal">R$ 3,00</strong></div>
+        <div><span>Taxa de entrega</span><strong id="checkoutDeliveryFee">—</strong></div>
+        <div class="checkout-grand-total"><span>Total do pedido</span><strong id="checkoutGrandTotal">—</strong></div>
       </section>
 
       <label>
@@ -377,7 +355,7 @@ Procure pelos comentários ===== para localizar cada área.
 
 
   <!-- JavaScript principal -->
-  <script src="js/cardapio.js"></script>
+  <script src="js/cardapio.js?v=7"></script>
 
 </body>
 </html>

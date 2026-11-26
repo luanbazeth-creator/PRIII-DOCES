@@ -36,9 +36,14 @@ img { display: block; max-width: 100%; }
 h1 { margin: 0; font-family: "Playfair Display", Georgia, serif; font-size: clamp(32px, 7vw, 48px); line-height: 1.1; }
 .intro { max-width: 590px; margin: 12px 0 0; color: var(--brown-muted); font-size: 16px; line-height: 1.6; }
 .stations-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.station-card { min-width: 0; overflow: hidden; background: var(--pink-light); border: 1px solid var(--pink-border); border-radius: 22px; box-shadow: var(--shadow); }
+.station-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; background: var(--pink-light); border: 1px solid var(--pink-border); border-radius: 22px; box-shadow: var(--shadow); }
 .station-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--pink-card); }
-.station-content { display: flex; flex-direction: column; align-items: flex-start; padding: 17px; height: calc(100% - auto); }
+/* Foto clicável da Estação Fini; legenda e botão aparecem logo abaixo. */
+.station-photo-link { display: block; width: 100%; }
+.station-photo-link .station-image { height: auto; aspect-ratio: 4 / 3; }
+.station-photo-link:focus-visible { outline: 3px solid var(--pink-deep); outline-offset: -3px; }
+
+.station-content { display: flex; flex-direction: column; align-items: flex-start; padding: 17px; flex: 1; }
 .station-content h2 { margin: 0 0 8px; font-family: "Playfair Display", Georgia, serif; font-size: clamp(20px, 3vw, 25px); line-height: 1.2; }
 .station-content p { margin: 0 0 18px; color: var(--brown-muted); font-size: 14px; line-height: 1.55; }
 .whatsapp-button { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 48px; margin-top: auto; padding: 11px 12px; color: #fff; background: var(--pink-deep); border: 1px solid #96294b; border-radius: 13px; font-size: 14px; font-weight: 800; text-align: center; transition: background .15s ease, transform .15s ease; }
@@ -48,7 +53,7 @@ h1 { margin: 0; font-family: "Playfair Display", Georgia, serif; font-size: clam
 @media (max-width: 560px) {
   body { padding: 16px 12px 28px; }
   .stations-grid { grid-template-columns: 1fr; gap: 16px; }
-  .station-image { aspect-ratio: 5 / 3; }
+  .station-image, .station-photo-link .station-image { aspect-ratio: 5 / 3; }
   .stations-header { padding: 17px 8px 22px; }
   .intro { font-size: 15px; }
   .station-content { padding: 16px; }

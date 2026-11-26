@@ -148,8 +148,43 @@ No modal de personalização, os botões `−` e `+` permitem escolher a quantid
 
 
 ## Página de Estações (adicionada)
-- `estacoes.html`: página exclusiva com Açaí, Fondue, Experiência Fondue e Estação Donuts.
+- `estacoes.html`: página exclusiva com Açaí, Fondue, Donuts, Fini e Guloseimas.
 - `css/estacoes.css`: estilos próprios da página de estações.
 - `assets/estacao-donuts.jpeg`: foto de donuts fornecida para esta atualização.
 - Cada cartão tem um botão que abre o WhatsApp oficial da PRII DOCES com uma mensagem pronta.
 - O botão “Estações” da página inicial aponta para `estacoes.html`. A página inicial agora usa o rosa claro e não exibe as fotos das estações.
+
+
+## Área Artelato (adicionada)
+- O atalho **Artelato** fica na sexta posição da grade da página inicial, no espaço que estava vazio.
+- `artelato.html` apresenta a **Torta Artelato** com a foto `assets/torta-artelato.jpeg`.
+- O botão da torta abre o WhatsApp oficial para consultar valor e disponibilidade.
+- `css/artelato.css` controla o visual dessa página.
+- A foto `assets/perfil.jpg` agora aparece como fundo discreto e transparente na página inicial. Ela não bloqueia os cliques nos atalhos.
+
+
+## Atualização: primeira página profissional (20/11/2026)
+Apenas `index.html` e `css/index.css` foram alterados nesta versão. A foto `assets/perfil.jpg` fica em destaque na parte superior, com a marca `assets/logo-prii-doces.png` logo abaixo. Os botões de cardápio, estações, sobremesas, Artelato, WhatsApp e Instagram foram preservados. Esta versão é o site estático anterior à integração com Firebase/Supabase.
+
+
+## Atualização — botões originais + foto e logo (20/11/2026)
+- Primeira página retornou aos SEIS botões originais: Nosso delivery, Estações, Sobremesas, Instagram, WhatsApp e Artelato.
+- Foto `assets/perfil.jpg` no alto da página e logo `assets/logo-prii-doces.png` imediatamente abaixo.
+- Não foram alterados os outros arquivos/páginas do cardápio, estações, Artelato ou carrinho.
+- Para visualizar a versão nova depois de publicar, recarregue a página sem cache (Ctrl+Shift+R).
+
+## Ajuste da página inicial — logo abaixo dos botões (20/11/2026)
+- Ordem: foto no topo, seis botões originais, logo PRII DOCES centralizada, frase e rodapé.
+- Todo o restante do site, links, cardápio, estações e carrinho foi preservado.
+- Atualize sem cache (Ctrl+Shift+R) após publicar.
+
+## Ajuste da home — foco mobile e foto mais transparente (20/11/2026)
+- Estrutura mantida: foto em cima, seis botões originais no meio e logo embaixo dos botões.
+- Foto suavizada com transparência para não pesar visualmente.
+- Layout mantido com prioridade para celular.
+
+## Atualização de 25/11/2026
+- Nova Estação Brigadeiro de Colher em `estacoes.html`, com a foto `assets/estacao-brigadeiro-de-colher.jpeg` e botão de consulta pelo WhatsApp.
+- Imagens do Artelato atualizadas em `assets/artelato.jpeg` (atalho da página inicial) e `assets/torta-artelato.jpeg` (página do produto).
+- Os valores da estação continuam sob consulta pelo WhatsApp, como nas demais estações.
+- Layout e demais produtos preservados.

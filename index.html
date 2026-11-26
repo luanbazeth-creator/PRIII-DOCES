@@ -13,15 +13,16 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- O estilo fica separado para facilitar futuras edições. -->
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css?v=20261120-mobile-transparente">
 </head>
 <body>
   <main class="link-page" id="inicio">
-    <!-- Logo da marca: aparece no topo, sem o mockup de celular. -->
+    <!-- Foto em cima, os seis botões originais no meio e logotipo embaixo. -->
     <header class="store-header">
-      <img class="brand-logo" src="assets/logo-prii-doces.png" alt="Logo da PRII DOCES">
-
-      <!-- Atalhos principais, posicionados logo abaixo da marca. -->
+      <figure class="profile-cover">
+        <img src="assets/perfil.jpg" alt="Confeiteira da PRII DOCES apresentando seus doces" width="900" height="900" fetchpriority="high">
+      </figure>
+      <!-- Atalhos originais, com os mesmos ícones, textos e links. -->
       <nav class="icon-links" aria-label="Atalhos da PRII DOCES">
         <!-- 1. Cardápio e delivery. -->
         <a class="icon-link" href="cardapio.html" aria-label="Nosso delivery">
@@ -65,18 +66,22 @@
           </span>
           <span class="icon-label">WhatsApp</span>
         </a>
+
+        <!-- 6. Nova área Artelato, posicionada no espaço livre da grade. -->
+        <a class="icon-link artelato-link" href="artelato.html" aria-label="Conheça o Artelato">
+          <span class="icon-art photo-art">
+            <img src="assets/artelato.jpeg?v=20261125" alt="" aria-hidden="true">
+          </span>
+          <span class="icon-label">Artelato</span>
+        </a>
       </nav>
-
-      <!-- Foto da Priscila, em destaque e sem moldura de celular. -->
-      <div class="profile-picture">
-        <img src="assets/perfil.jpg" alt="Priscila, da PRII DOCES">
-      </div>
-
-      <p class="store-description">Pâtisserie • Doces artesanais feitos com carinho</p>
+      <!-- Logotipo centralizado ABAIXO dos seis botões originais. -->
+      <img class="brand-logo header-logo" src="assets/logo-prii-doces.png" alt="Logo da PRII DOCES" width="1080" height="1060">
+      <p class="store-description">Ateliê • Doces artesanais feitos com carinho</p>
     </header>
 
     <footer class="page-footer">
-      <p>PRII DOCES <span aria-hidden="true">•</span> Um toque de carinho em cada doce.</p>
+        <p>PRII DOCES <span aria-hidden="true">•</span> Um toque de carinho em cada doce.</p>
     </footer>
   </main>
 </body>

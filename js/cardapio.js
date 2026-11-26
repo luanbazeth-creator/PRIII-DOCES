@@ -47,72 +47,150 @@
    ============================================================ */
 
 const products = [
-  {
-    id: 1,
-    name: "Brigadeiro Gourmet",
-    category: "Brigadeiros",
-    price: 4.50,
-    description: "Brigadeiro cremoso com chocolate de qualidade.",
-    emoji: "🍫",
-    customizable: true
-  },
-  {
-    id: 2,
-    name: "Beijinho",
-    category: "Brigadeiros",
-    price: 4.50,
-    description: "Docinho de coco delicado e cremoso.",
-    emoji: "🥥",
-    customizable: true
-  },
-  {
-    id: 3,
-    name: "Morango do Amor",
-    category: "Doces",
-    price: 12.00,
-    description: "Morango envolvido em uma deliciosa cobertura.",
-    emoji: "🍓"
-  },
-  {
-    id: 4,
-    name: "Brownie Gourmet",
-    category: "Brownies",
-    price: 10.00,
-    description: "Brownie macio, intenso e cheio de chocolate.",
-    emoji: "🍫"
-  },
-  {
-    id: 5,
-    name: "Bolo de Pote",
-    category: "Bolos",
-    price: 14.00,
-    description: "Camadas de bolo e recheio preparados na hora.",
-    emoji: "🍰"
-  },
-  {
-    id: 6,
-    name: "Mini Bolo",
-    category: "Bolos",
-    price: 28.00,
-    description: "Bolo delicado perfeito para presentear.",
-    emoji: "🎂"
-  },
-  {
-    id: 7,
-    name: "Kit Festa",
-    category: "Kits",
-    price: 49.90,
-    description: "Seleção especial de doces para sua comemoração.",
-    emoji: "🎁"
-  },
-  {
-    id: 8,
-    name: "Caixa Especial",
-    category: "Caixas de 4 a 12",
-    price: 59.90,
-    description: "Uma caixa linda com nossos doces favoritos.",
-    emoji: "💝"
-  }
+    // ============================================================
+    // SOBREMESAS
+    // Para adicionar um produto, basta copiar um bloco e alterar
+    // nome, imagem e preço.
+    // ============================================================
+
+    {
+        id: 9,
+        name: "Açaí",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/acai.jpeg"
+    },
+
+    {
+        id: 10,
+        name: "Bombom de Morango",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/bombo-de-morango-ferrero-rocher-ninho-com-nutela-brigadeiro.jpeg"
+    },
+
+    {
+        id: 11,
+        name: "Brownie Nuvem",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/brownie-nuvem.jpeg"
+    },
+
+    {
+        id: 12,
+        name: "Brownie Supremo",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/brownie-supremo-com-recheio-de-brigadeiro-ou-ninho-decorado.jpeg"
+    },
+
+    {
+        id: 13,
+        name: "Caixa de Doces",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/caixa-de-doces.jpeg"
+    },
+
+    {
+        id: 14,
+        name: "Copo Brownie Ferrero Rocher",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/cop-brawnie-ferreiro-rocher.jpeg"
+    },
+
+    {
+        id: 15,
+        name: "Copo Brownie Chocomelo",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/copo-brownie-chocomelo-ferrero-rocher-ninho-com-morango.jpeg"
+    },
+
+    {
+        id: 16,
+        name: "Copo da Felicidade de Morango",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/copo-da-felicidade-de-morango.jpeg"
+    },
+
+    {
+        id: 17,
+        name: "Fatia de Brownie",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/fatia-brownie.jpeg"
+    },
+
+    {
+        id: 18,
+        name: "Fatia de Brownie Especial",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/fatia-brownie2.jpeg"
+    },
+
+    {
+        id: 19,
+        name: "Pote de Sorvete",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/pote-de-sorvete.jpeg"
+    },
+
+    {
+        id: 20,
+        name: "Sanduíche de Brownie",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/sanduiche-brownie.jpeg"
+    },
+
+    {
+        id: 21,
+        name: "Sobremesa de Brigadeiro com Morango",
+        category: "Sobremesas",
+        price: 12.00,
+        description: "Uma deliciosa sobremesa.",
+        image: "assets/sobremesas/sobremesa-de-brigadeiro-com-morango-e-creme-de-ninho.jpeg"
+    },
+
+    // Fotos que vieram com nome automático do WhatsApp.
+    // Elas aparecem sem título no cardápio.
+    {
+        id: 22,
+        name: "Sobremesa",
+        showName: false,
+        category: "Sobremesas",
+        price: 12.00,
+        description: "",
+        image: "assets/sobremesas/WhatsApp Image 2026-10-25 at 15.10.30.jpeg"
+    },
+
+    {
+        id: 23,
+        name: "Sobremesa",
+        showName: false,
+        category: "Sobremesas",
+        price: 12.00,
+        description: "",
+        image: "assets/sobremesas/WhatsApp Image 2026-10-25 at 15.10.33 (1).jpeg"
+    }
 ];
 
 
@@ -227,15 +305,37 @@ function renderProducts() {
 
 
 function createProductCard(product) {
-  const customizationLabel = product.customizable
-    ? `<small class="customizable-label">♡ Monte do seu jeito</small>`
-    : "";
 
-  return `
+    const customizationLabel = product.customizable
+        ? `<small class="customizable-label">♡ Monte do seu jeito</small>`
+        : "";
+
+    // Se o produto tiver foto, mostra a imagem.
+    // Se não tiver, mantém o emoji antigo.
+    const productVisual = product.image
+        ? `
+      <img
+        src="${product.image}"
+        alt="${product.showName === false ? "Sobremesa da PRII DOCES" : product.name}"
+        loading="lazy"
+      >
+    `
+        : product.emoji;
+
+    // Alguns produtos podem aparecer sem título.
+    const productName = product.showName === false
+        ? ""
+        : `<h3>${product.name}</h3>`;
+
+    const productDescription = product.description
+        ? `<p>${product.description}</p>`
+        : "";
+
+    return `
     <article class="product-card" data-product-id="${product.id}">
 
       <div class="product-image">
-        ${product.emoji}
+        ${productVisual}
       </div>
 
       <div class="product-info">
@@ -244,13 +344,9 @@ function createProductCard(product) {
           ${product.category}
         </span>
 
-        <h3>
-          ${product.name}
-        </h3>
+        ${productName}
 
-        <p>
-          ${product.description}
-        </p>
+        ${productDescription}
 
         ${customizationLabel}
 
@@ -260,17 +356,32 @@ function createProductCard(product) {
             ${formatCurrency(product.price)}
           </span>
 
-          <!-- Mostra a quantidade desse produto que já está no carrinho. -->
-          <div class="product-add-controls">
-            <span class="product-cart-quantity" data-quantity-for="${product.id}" aria-label="Quantidade no carrinho">${getProductQuantity(product.id)}</span>
+          <div class="product-add-controls" aria-label="Quantidade de ${product.name} no carrinho">
+
+            <button
+              class="decrease-product"
+              type="button"
+              data-product-action="decrease"
+              data-product-id="${product.id}"
+              data-decrease-for="${product.id}"
+              aria-label="Remover uma unidade de ${product.name}"
+              ${getProductQuantity(product.id) === 0 ? "disabled" : ""}
+            >−</button>
+
+            <span
+              class="product-cart-quantity"
+              data-quantity-for="${product.id}"
+              aria-live="polite"
+            >${getProductQuantity(product.id)}</span>
+
             <button
               class="add-product"
               type="button"
-              onclick="handleProductSelection(${product.id})"
-              aria-label="Adicionar ${product.name} ao carrinho"
-            >
-              +
-            </button>
+              data-product-action="increase"
+              data-product-id="${product.id}"
+              aria-label="Adicionar uma unidade de ${product.name}"
+            >+</button>
+
           </div>
 
         </div>
@@ -358,50 +469,77 @@ function getProductQuantity(productId) {
     .reduce((total, item) => total + item.quantity, 0);
 }
 
-// Atualiza os números ao lado do botão + em todos os cards visíveis.
+// Sincroniza quantidade e botão − do cardápio com o carrinho.
 function updateProductQuantityBadges() {
   document.querySelectorAll("[data-quantity-for]").forEach((badge) => {
-    const productId = Number(badge.dataset.quantityFor);
-    badge.textContent = getProductQuantity(productId);
-    badge.classList.toggle("has-quantity", getProductQuantity(productId) > 0);
+    const quantity = getProductQuantity(Number(badge.dataset.quantityFor));
+    badge.textContent = quantity;
+    badge.classList.toggle("has-quantity", quantity > 0);
+  });
+
+  document.querySelectorAll("[data-decrease-for]").forEach((button) => {
+    button.disabled = getProductQuantity(Number(button.dataset.decreaseFor)) === 0;
   });
 }
 
+// Quando houver variações do mesmo produto, diminui a última adicionada.
+function decreaseProductQuantity(productId) {
+  const item = [...cartItemsState].reverse().find((entry) => entry.productId === productId);
+  if (item) changeQuantity(item.cartId, -1);
+}
+
+// Eventos delegados: botões seguem funcionando ao buscar ou trocar categoria.
+elements.products.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-product-action][data-product-id]");
+  if (!button || !elements.products.contains(button) || button.disabled) return;
+  event.preventDefault();
+
+  const productId = Number(button.dataset.productId);
+  if (button.dataset.productAction === "decrease") {
+    decreaseProductQuantity(productId);
+  } else if (button.dataset.productAction === "increase") {
+    handleProductSelection(productId);
+  }
+});
+
 function addToCart(product, quantity = 1, customization = {}) {
-  const cartId = createCartId(product.id, customization);
-  const existingItem = cartItemsState.find((item) => item.cartId === cartId);
-  if (existingItem) {
-    existingItem.quantity += quantity;
-  } else {
-    cartItemsState.push({
-      cartId, productId: product.id, name: product.name, category: product.category,
-      price: product.price, emoji: product.emoji, quantity, customization
-    });
-  }
-  renderCart();
-  // O carrinho NÃO abre automaticamente. O cliente continua no cardápio.
-}
 
-function changeQuantity(cartId, amount) {
-  const item = cartItemsState.find(
-    (cartItem) => cartItem.cartId === cartId
-  );
+    const cartId = createCartId(product.id, customization);
 
-  if (!item) {
-    return;
-  }
-
-  item.quantity += amount;
-
-  if (item.quantity <= 0) {
-    cartItemsState = cartItemsState.filter(
-      (cartItem) => cartItem.cartId !== cartId
+    const existingItem = cartItemsState.find(
+        (item) => item.cartId === cartId
     );
-  }
 
-  renderCart();
+    if (existingItem) {
+
+        existingItem.quantity += quantity;
+
+    } else {
+
+        cartItemsState.push({
+
+            cartId: cartId,
+            productId: product.id,
+
+            name: product.name,
+            category: product.category,
+
+            price: product.price,
+
+            // Guarda a foto e o emoji, caso existam.
+            image: product.image || "",
+            emoji: product.emoji || "🍰",
+
+            quantity: quantity,
+            customization: customization
+
+        });
+
+    }
+
+    renderCart();
+
 }
-
 
 function calculateCartTotal() {
   return cartItemsState.reduce(
@@ -459,41 +597,109 @@ function renderCart() {
 
   elements.cartItems.innerHTML =
     cartItemsState
-      .map(createCartItem)
+      .map((item, index) => createCartItem(item, index))
       .join("");
 }
 
 
-function createCartItem(item) {
-  const customizationLabel = getCustomizationLabel(item.customization);
-  return `
+function createCartItem(item, index) {
+
+    const customizationLabel =
+        getCustomizationLabel(item.customization);
+
+    // Verifica se o produto possui uma foto.
+    const productImage = item.image
+        ? `
+      <img
+        src="${item.image}"
+        alt="${item.name}"
+        loading="lazy"
+      >
+    `
+        : `
+      <span>${item.emoji || "🍰"}</span>
+    `;
+
+    return `
+
     <div class="cart-item">
-      <div class="cart-item-image">${item.emoji}</div>
-      <div>
-        <h4>${item.name}</h4>
-        <p>${formatCurrency(item.price)} cada</p>
-        ${customizationLabel ? `<p class="cart-customization">${customizationLabel}</p>` : ""}
-        <div class="quantity-controls" aria-label="Alterar quantidade de ${item.name}">
-          <button type="button" data-cart-action="decrease" data-cart-id="${encodeURIComponent(item.cartId)}" aria-label="Diminuir quantidade de ${item.name}">−</button>
-          <strong aria-live="polite">${item.quantity}</strong>
-          <button type="button" data-cart-action="increase" data-cart-id="${encodeURIComponent(item.cartId)}" aria-label="Aumentar quantidade de ${item.name}">+</button>
-        </div>
+
+      <div class="cart-item-image">
+        ${productImage}
       </div>
-      <strong>${formatCurrency(item.price * item.quantity)}</strong>
+
+      <div class="cart-item-info">
+
+        <h4>${item.name}</h4>
+
+        <p class="cart-item-price">
+          ${formatCurrency(item.price)} cada
+        </p>
+
+        ${customizationLabel
+            ? `<p class="cart-customization">${customizationLabel}</p>`
+            : ""
+        }
+
+        <div class="quantity-controls">
+
+          <button
+            type="button"
+            data-cart-action="decrease"
+            data-cart-index="${index}"
+            aria-label="Diminuir quantidade de ${item.name}"
+          >−</button>
+
+          <strong class="cart-item-quantity" aria-live="polite">${item.quantity}</strong>
+
+          <button
+            type="button"
+            data-cart-action="increase"
+            data-cart-index="${index}"
+            aria-label="Aumentar quantidade de ${item.name}"
+          >+</button>
+
+        </div>
+
+      </div>
+
+      <strong class="cart-item-subtotal">
+        ${formatCurrency(item.price * item.quantity)}
+      </strong>
+
     </div>
+
   `;
+
 }
 
-// Usa delegação de eventos para que os botões continuem funcionando
-// após o carrinho ser redesenhado. Também evita problemas com aspas
-// nas opções de personalização do produto.
-elements.cartItems.addEventListener("click", (event) => {
-  const button = event.target.closest("button[data-cart-action][data-cart-id]");
-  if (!button) return;
+// Altera a quantidade de um item do carrinho. Ao chegar a zero,
+// remove o item por completo (sem permitir quantidades negativas).
+function changeQuantity(cartId, amount) {
+  const index = cartItemsState.findIndex((item) => item.cartId === cartId);
+  if (index < 0 || !Number.isInteger(amount) || amount === 0) return;
 
-  const cartId = decodeURIComponent(button.dataset.cartId);
+  const nextQuantity = cartItemsState[index].quantity + amount;
+  if (nextQuantity <= 0) {
+    cartItemsState.splice(index, 1);
+  } else {
+    cartItemsState[index].quantity = nextQuantity;
+  }
+
+  renderCart();
+}
+
+// Usa o índice atual do item, evitando nomes codificados nos atributos HTML.
+// Após cada alteração o carrinho é redesenhado e os índices são atualizados.
+elements.cartItems.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-cart-action][data-cart-index]");
+  if (!button || !elements.cartItems.contains(button)) return;
+  event.preventDefault();
+
+  const index = Number(button.dataset.cartIndex);
+  if (!Number.isInteger(index) || index < 0 || index >= cartItemsState.length) return;
   const amount = button.dataset.cartAction === "increase" ? 1 : -1;
-  changeQuantity(cartId, amount);
+  changeQuantity(cartItemsState[index].cartId, amount);
 });
 
 
@@ -514,10 +720,12 @@ function closeCart() {
 
 
 function openCheckoutModal() {
-  if (!cartItemsState.length) {
-    return;
-  }
+  if (!cartItemsState.length) return;
 
+  // Nenhum recebimento vem marcado, nem mesmo após fechar e abrir novamente.
+  document.getElementById("deliveryMethod").value = "";
+  clearDeliveryMethodError();
+  updateCheckoutSummary();
   elements.checkoutModal.classList.add("show");
 }
 
@@ -578,12 +786,17 @@ function sendOrderToWhatsApp() {
   const deliveryMethod = document.getElementById("deliveryMethod").value;
   const isDelivery = deliveryMethod === "Entrega com frete";
 
-  // Para entrega, o endereço é obrigatório. Na retirada, ele é opcional.
+  if (!cartItemsState.length) return;
   if (!name) {
     alert("Preencha seu nome para continuar.");
+    document.getElementById("customerName").focus();
     return;
   }
 
+  // Sem seleção explícita, não é possível encaminhar o pedido.
+  if (!validateDeliveryMethod()) return;
+
+  // Para entrega, o endereço é obrigatório. Na retirada, ele é opcional.
   if (isDelivery && !address) {
     alert("Informe o endereço para a entrega.");
     return;
@@ -750,6 +963,10 @@ document
   });
 
 
+// A opção Dinheiro deve abrir o campo de troco.
+elements.payment.addEventListener("change", updatePaymentFieldsV5);
+elements.changeFor.addEventListener("input", updateChangePreviewV5);
+
 elements.checkoutButton.addEventListener(
   "click",
   openCheckoutModal
@@ -769,8 +986,24 @@ document
 const deliveryMethodSelect = document.getElementById("deliveryMethod");
 const deliveryMethodNote = document.getElementById("deliveryMethodNote");
 
+function clearDeliveryMethodError() {
+  deliveryMethodSelect.setAttribute("aria-invalid", "false");
+  document.getElementById("deliveryMethodError").hidden = true;
+}
+
+function validateDeliveryMethod() {
+  const valid = ["Entrega com frete", "Retirada no local"].includes(deliveryMethodSelect.value);
+  deliveryMethodSelect.setAttribute("aria-invalid", String(!valid));
+  document.getElementById("deliveryMethodError").hidden = valid;
+  if (!valid) deliveryMethodSelect.focus();
+  return valid;
+}
+
 if (deliveryMethodSelect) {
-  deliveryMethodSelect.addEventListener("change", updateCheckoutSummary);
+  deliveryMethodSelect.addEventListener("change", () => {
+    clearDeliveryMethodError();
+    updateCheckoutSummary();
+  });
 }
 
 
@@ -888,6 +1121,7 @@ t.addEventListener("keydown",e=>{const c=e.target.closest(".carousel-card");if(!
 // O subtotal contém apenas os produtos; o frete entra no total final.
 function calculateCheckoutTotal() {
   const deliveryMethod = document.getElementById("deliveryMethod")?.value;
+  if (!["Entrega com frete", "Retirada no local"].includes(deliveryMethod)) return null;
   const fee = deliveryMethod === "Entrega com frete" ? DELIVERY_FEE : 0;
   return calculateCartTotal() + fee;
 }
@@ -895,6 +1129,7 @@ function calculateCheckoutTotal() {
 function updateCheckoutSummary() {
   const deliveryMethod = document.getElementById("deliveryMethod")?.value;
   const isDelivery = deliveryMethod === "Entrega com frete";
+  const hasSelection = ["Entrega com frete", "Retirada no local"].includes(deliveryMethod);
   const subtotal = calculateCartTotal();
   const fee = isDelivery ? DELIVERY_FEE : 0;
   const total = subtotal + fee;
@@ -905,13 +1140,15 @@ function updateCheckoutSummary() {
   const note = document.getElementById("deliveryMethodNote");
 
   if (subtotalElement) subtotalElement.textContent = formatCurrency(subtotal);
-  if (feeElement) feeElement.textContent = formatCurrency(fee);
-  if (totalElement) totalElement.textContent = formatCurrency(total);
+  if (feeElement) feeElement.textContent = hasSelection ? formatCurrency(fee) : "—";
+  if (totalElement) totalElement.textContent = hasSelection ? formatCurrency(total) : "—";
 
   if (note) {
-    note.textContent = isDelivery
-      ? `Taxa fixa de entrega: ${formatCurrency(DELIVERY_FEE)}. O valor já está incluído no total abaixo.`
-      : "Retirada no local sem taxa de entrega. O total abaixo inclui somente os produtos.";
+    note.textContent = !hasSelection
+      ? "Escolha entrega ou retirada. A taxa de entrega é R$ 3,00; a retirada não tem taxa."
+      : isDelivery
+        ? `Taxa fixa de entrega: ${formatCurrency(DELIVERY_FEE)}. O valor já está incluído no total abaixo.`
+        : "Retirada no local sem taxa de entrega. O total abaixo inclui somente os produtos.";
   }
 
   updateChangePreviewV5();
@@ -925,30 +1162,11 @@ function updatePaymentFieldsV5(){
 }
 function updateChangePreviewV5(){
  if(elements.payment.value!=="Dinheiro")return;
+ const total=calculateCheckoutTotal();
+ if(total === null){elements.changePreview.textContent="Escolha entrega ou retirada para calcular o troco.";elements.changePreview.className="change-preview";return}
  const rawAmount=elements.changeFor.value.replace(",",".");
- const amount=Number(rawAmount),total=calculateCheckoutTotal();
+ const amount=Number(rawAmount);
  if(!rawAmount||!Number.isFinite(amount)||amount<=0){elements.changePreview.textContent="Digite quanto o cliente vai entregar.";elements.changePreview.className="change-preview";return}
  if(amount<total){elements.changePreview.textContent=`Valor insuficiente. Faltam ${formatCurrency(total-amount)}.`;elements.changePreview.className="change-preview invalid";return}
  elements.changePreview.textContent=`Troco: ${formatCurrency(amount-total)}`;elements.changePreview.className="change-preview valid";
 }
-function initV5(){
- renderCarousel();setupCarousel();updatePaymentFieldsV5();updateCarousel();startCarousel();
- elements.payment.addEventListener("change",updatePaymentFieldsV5);
- elements.changeFor.addEventListener("input",updateChangePreviewV5);
- updateCheckoutSummary();
- document.querySelectorAll(".product-card").forEach(c=>{if(c.dataset.productId)return});
-}
-if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initV5);else initV5();
-
-const _priiObserver=new MutationObserver(()=>{
- const cards=document.querySelectorAll(".product-card");
- cards.forEach(card=>{
-   if(card.dataset.productId)return;
-   const buttons=card.querySelectorAll("button");
-   const add=buttons[buttons.length-1];
-   const txt=card.textContent||"";
-   const p=products.find(x=>txt.includes(x.name));
-   if(p)card.dataset.productId=p.id;
- });
-});
-_priiObserver.observe(document.body,{childList:true,subtree:true});
